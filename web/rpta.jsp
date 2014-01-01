@@ -13,14 +13,18 @@
     </head>
     <body>
         <h1>Gracias por responder</h1>
-        <p><%=request.getParameter("nombre") %> , Nos ha indicado que le gusta:</p>
+        <p><jsp:useBean id="datosEncuesta" scope="request" class="modelo.DatosEncuesta" />
+            <jsp:getProperty name="datosEncuesta" property="nombre" />, Nos ha indicado que le gusta:
+
+
+        </p>
         <ul>
-            <% String opciones[]=request.getParameterValues("options"); 
-            for (int i=0;i<opciones.length;i++){ %>
+            <% String opciones[] = datosEncuesta.getLengProg();
+                for (int i = 0; i < opciones.length; i++) {%>
             <li><%=opciones[i]%></li>
-                
-           <% } %>
-            
+
+            <% }%>
+
         </ul>
     </body>
 </html>

@@ -14,7 +14,7 @@
     <body>
         <h1>Bienvenido a la encuesta para desarrolladores</h1>
         <span>Indique el lenguaje con el que esta familiarizado:</span>
-        <form method="post" action="rpta.jsp">
+        <form action="ServletController" method="post" >
             Ingrese su nombre:<input type="text" name="nombre"><br>
             Java:<input type="checkbox" name="options" value="JAVA"><br>
             PHP:<input type="checkbox" name="options" value="PHP"><br>
